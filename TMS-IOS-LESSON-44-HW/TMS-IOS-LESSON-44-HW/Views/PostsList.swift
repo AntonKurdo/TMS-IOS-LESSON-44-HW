@@ -1,8 +1,18 @@
-//
-//  PostsList.swift
-//  TMS-IOS-LESSON-44-HW
-//
-//  Created by mac on 21/05/2024.
-//
+import SwiftUI
 
-import Foundation
+struct PostsList: View {
+    
+    @ObservedObject
+    var vm: PostsViewModel
+    
+    var body: some View {
+        List(vm.posts, id: \.id) { p in
+            Post(post: p)
+        }
+        .navigationTitle("Posts")
+    }
+}
+
+#Preview {
+    PostsList(vm: PostsViewModel())
+}

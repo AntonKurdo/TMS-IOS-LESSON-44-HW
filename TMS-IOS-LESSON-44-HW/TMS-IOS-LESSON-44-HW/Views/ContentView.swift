@@ -1,18 +1,18 @@
 import SwiftUI
+import Foundation
 
 struct ContentView: View {
     
     @State
     var isTrue = true
+
+    @ObservedObject
+    var vm: PostsViewModel = PostsViewModel()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            PostsList(vm: vm)
         }
-        .padding()
     }
 }
 

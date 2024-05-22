@@ -1,8 +1,18 @@
-//
-//  ImageCache.swift
-//  TMS-IOS-LESSON-44-HW
-//
-//  Created by mac on 21/05/2024.
-//
+import UIKit
 
-import Foundation
+class ImageCache {
+    static let shared = ImageCache()
+
+    private let cache = NSCache<NSString, UIImage>()
+
+    private init() {}
+
+    func set(_ image: UIImage, forKey key: String) {
+        print(image, key)
+        cache.setObject(image, forKey: key as NSString)
+    }
+
+    func get(forKey key: String) -> UIImage? {
+        return cache.object(forKey: key as NSString)
+    }
+}

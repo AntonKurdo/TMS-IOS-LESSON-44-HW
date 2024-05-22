@@ -1,13 +1,17 @@
 import Foundation
 
 struct PostModel: Codable {
-    let id: UUID
+    let id: Int
     let title: String
+    let text: String
     let image: String
-    let percentage: CGFloat
     let stars: Int
+    
+    private enum CodingKeys : String, CodingKey {
+        case id, title, text, image, stars
+    }
 }
 
 struct PostsResponse: Codable {
-    let posts: [Post]
+    let posts: [PostModel]
 }
