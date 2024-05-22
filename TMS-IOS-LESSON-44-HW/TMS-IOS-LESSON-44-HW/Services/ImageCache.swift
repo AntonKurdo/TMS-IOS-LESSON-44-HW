@@ -8,7 +8,6 @@ class ImageCache {
     private init() {}
 
     func set(_ image: UIImage, forKey key: String) {
-        print(image, key)
         cache.setObject(image, forKey: key as NSString)
     }
 

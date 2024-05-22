@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct Post: View {
-    
     @State
     var post: PostModel
     
@@ -22,8 +21,4 @@ struct Post: View {
             Spacer()
         }.padding(.vertical)
     }
-}
-
-#Preview {
-    Post(post: POSTS_MOCK[0])
 }

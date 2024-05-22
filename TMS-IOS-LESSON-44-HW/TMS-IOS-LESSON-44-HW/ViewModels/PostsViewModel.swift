@@ -7,16 +7,36 @@ class PostsViewModel: ObservableObject {
     
     private var api = APIService()
     
+    private let realmManager =  RealmManager.shared
+    
     init() {
-        api.getPosts(completionHandler: { [weak self] items in
-            DispatchQueue.main.async {
-                self?.posts = items
-//                self?.posts = POSTS_MOCK
+        initialFetch()
+    }
+    
+    private func initialFetch() {
+        let cachedPosts = realmManager.fetchAllCachedPosts() ?? []
+        
+        posts = cachedPosts
+        
+        api.getPosts(completionHandler: { items in
+            items.forEach { fetchedPost in
+                let isAlreadyCached = cachedPosts.contains { cachedPost in
+                    cachedPost.id == fetchedPost.id
+                }
+                
+                if !isAlreadyCached {
+                    DispatchQueue.main.async {
+                        self.realmManager.addPost(rawPost: fetchedPost) {
+                            print("Caching for post with ID:\(fetchedPost.id) is done")
+                        }
+                        self.posts.append(fetchedPost)
+                    }
+                }
             }
+            
         }, errorHandler: { error in
             print(error)
         })
-
     }
     
 }

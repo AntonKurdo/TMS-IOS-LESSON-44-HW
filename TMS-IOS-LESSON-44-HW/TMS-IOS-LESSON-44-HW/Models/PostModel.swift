@@ -6,10 +6,6 @@ struct PostModel: Codable {
     let text: String
     let image: String
     let stars: Int
-    
-    private enum CodingKeys : String, CodingKey {
-        case id, title, text, image, stars
-    }
 }
 
 struct PostsResponse: Codable {

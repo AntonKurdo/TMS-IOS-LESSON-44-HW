@@ -6,10 +6,17 @@ struct PostsList: View {
     var vm: PostsViewModel
     
     var body: some View {
-        List(vm.posts, id: \.id) { p in
-            Post(post: p)
+        if vm.posts.isEmpty {
+            Text("List is empty now...")
+                .foregroundColor(.gray)
+                .navigationTitle("Posts")
+        } else {
+            List(vm.posts, id: \.id) { p in
+                Post(post: p)
+            }
+            .navigationTitle("Posts")
         }
-        .navigationTitle("Posts")
+        
     }
 }
 

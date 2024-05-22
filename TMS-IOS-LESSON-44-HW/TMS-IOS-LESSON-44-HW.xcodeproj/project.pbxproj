@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041290192BFE33060009F139 /* PostModel+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041290182BFE33060009F139 /* PostModel+Realm.swift */; };
+		0412901C2BFE332D0009F139 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0412901B2BFE332D0009F139 /* RealmSwift */; };
+		0412901E2BFE332D0009F139 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0412901B2BFE332D0009F139 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		041290202BFE34060009F139 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412901F2BFE34060009F139 /* RealmManager.swift */; };
 		041F3ED72BFC8D3E00639E25 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F3ED62BFC8D3E00639E25 /* Post.swift */; };
 		041F3EDA2BFC8EE300639E25 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F3ED92BFC8EE300639E25 /* ImageView.swift */; };
 		041F3EDC2BFC912B00639E25 /* PostsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F3EDB2BFC912B00639E25 /* PostsList.swift */; };
 		041F3EDE2BFC95DA00639E25 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F3EDD2BFC95DA00639E25 /* Rating.swift */; };
-		041F3EE02BFC99AB00639E25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F3EDF2BFC99AB00639E25 /* Constants.swift */; };
 		042D2CF02BFBE61500B44346 /* TMS_IOS_LESSON_44_HWApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D2CEF2BFBE61500B44346 /* TMS_IOS_LESSON_44_HWApp.swift */; };
 		042D2CF22BFBE61500B44346 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D2CF12BFBE61500B44346 /* ContentView.swift */; };
 		042D2CF42BFBE61700B44346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042D2CF32BFBE61700B44346 /* Assets.xcassets */; };
@@ -19,6 +22,7 @@
 		0443115B2BFC86D800E773F8 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443115A2BFC86D800E773F8 /* PostsViewModel.swift */; };
 		0443115D2BFC898A00E773F8 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443115C2BFC898A00E773F8 /* PostModel.swift */; };
 		0445976A2BFDFC4C002B3CF9 /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 044597692BFDFC4C002B3CF9 /* db.json */; };
+		047F14882BFE5599008A9172 /* Realm in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 047F14862BFE5599008A9172 /* Realm */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		04A97A242BFCC4C5005391F4 /* RemoteImage+cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A97A232BFCC4C5005391F4 /* RemoteImage+cache.swift */; };
 		04A97A262BFCC840005391F4 /* ImageLoaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A97A252BFCC840005391F4 /* ImageLoaderViewModel.swift */; };
 		04A97A292BFCC8BB005391F4 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A97A282BFCC8BB005391F4 /* ImageCache.swift */; };
@@ -26,12 +30,28 @@
 		04A97A2D2BFCD053005391F4 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A97A2C2BFCD053005391F4 /* AlertViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0412901D2BFE332D0009F139 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				047F14882BFE5599008A9172 /* Realm in Embed Frameworks */,
+				0412901E2BFE332D0009F139 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		041290182BFE33060009F139 /* PostModel+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostModel+Realm.swift"; sourceTree = "<group>"; };
+		0412901F2BFE34060009F139 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		041F3ED62BFC8D3E00639E25 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		041F3ED92BFC8EE300639E25 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		041F3EDB2BFC912B00639E25 /* PostsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsList.swift; sourceTree = "<group>"; };
 		041F3EDD2BFC95DA00639E25 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
-		041F3EDF2BFC99AB00639E25 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		042D2CEC2BFBE61500B44346 /* TMS-IOS-LESSON-44-HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMS-IOS-LESSON-44-HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		042D2CEF2BFBE61500B44346 /* TMS_IOS_LESSON_44_HWApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMS_IOS_LESSON_44_HWApp.swift; sourceTree = "<group>"; };
 		042D2CF12BFBE61500B44346 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,15 +72,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0412901C2BFE332D0009F139 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0412901A2BFE332D0009F139 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		041F3ED82BFC8ED500639E25 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				04A97A232BFCC4C5005391F4 /* RemoteImage+cache.swift */,
 				041F3EDD2BFC95DA00639E25 /* Rating.swift */,
 				041F3ED92BFC8EE300639E25 /* ImageView.swift */,
 			);
@@ -72,6 +101,7 @@
 			children = (
 				042D2CEE2BFBE61500B44346 /* TMS-IOS-LESSON-44-HW */,
 				042D2CED2BFBE61500B44346 /* Products */,
+				0412901A2BFE332D0009F139 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,16 +116,14 @@
 		042D2CEE2BFBE61500B44346 /* TMS-IOS-LESSON-44-HW */ = {
 			isa = PBXGroup;
 			children = (
+				042D2CF52BFBE61700B44346 /* Preview Content */,
 				044597682BFDFB44002B3CF9 /* db */,
 				04A97A272BFCC8A0005391F4 /* Services */,
-				04A97A222BFCC4A4005391F4 /* Utils */,
 				041F3ED82BFC8ED500639E25 /* Components */,
 				042D2D002BFBE91400B44346 /* App */,
 				042D2CFF2BFBE90500B44346 /* Models */,
 				042D2CFE2BFBE8FE00B44346 /* ViewModels */,
 				042D2CFD2BFBE8E900B44346 /* Views */,
-				042D2CF52BFBE61700B44346 /* Preview Content */,
-				041F3EDF2BFC99AB00639E25 /* Constants.swift */,
 			);
 			path = "TMS-IOS-LESSON-44-HW";
 			sourceTree = "<group>";
@@ -132,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				0443115C2BFC898A00E773F8 /* PostModel.swift */,
+				041290182BFE33060009F139 /* PostModel+Realm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,19 +182,12 @@
 			path = db;
 			sourceTree = "<group>";
 		};
-		04A97A222BFCC4A4005391F4 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				04A97A232BFCC4C5005391F4 /* RemoteImage+cache.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		04A97A272BFCC8A0005391F4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				04A97A282BFCC8BB005391F4 /* ImageCache.swift */,
 				04A97A2A2BFCCE61005391F4 /* API.swift */,
+				0412901F2BFE34060009F139 /* RealmManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -180,12 +202,17 @@
 				042D2CE82BFBE61500B44346 /* Sources */,
 				042D2CE92BFBE61500B44346 /* Frameworks */,
 				042D2CEA2BFBE61500B44346 /* Resources */,
+				0412901D2BFE332D0009F139 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "TMS-IOS-LESSON-44-HW";
+			packageProductDependencies = (
+				0412901B2BFE332D0009F139 /* RealmSwift */,
+				047F14862BFE5599008A9172 /* Realm */,
+			);
 			productName = "TMS-IOS-LESSON-44-HW";
 			productReference = 042D2CEC2BFBE61500B44346 /* TMS-IOS-LESSON-44-HW.app */;
 			productType = "com.apple.product-type.application";
@@ -214,6 +241,9 @@
 				Base,
 			);
 			mainGroup = 042D2CE32BFBE61500B44346;
+			packageReferences = (
+				041290132BFE2FDA0009F139 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 042D2CED2BFBE61500B44346 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +274,8 @@
 				04A97A262BFCC840005391F4 /* ImageLoaderViewModel.swift in Sources */,
 				042D2CF22BFBE61500B44346 /* ContentView.swift in Sources */,
 				041F3EDA2BFC8EE300639E25 /* ImageView.swift in Sources */,
+				041290192BFE33060009F139 /* PostModel+Realm.swift in Sources */,
+				041290202BFE34060009F139 /* RealmManager.swift in Sources */,
 				04A97A2D2BFCD053005391F4 /* AlertViewModel.swift in Sources */,
 				0443115B2BFC86D800E773F8 /* PostsViewModel.swift in Sources */,
 				042D2CF02BFBE61500B44346 /* TMS_IOS_LESSON_44_HWApp.swift in Sources */,
@@ -254,7 +286,6 @@
 				0443115D2BFC898A00E773F8 /* PostModel.swift in Sources */,
 				041F3ED72BFC8D3E00639E25 /* Post.swift in Sources */,
 				04A97A242BFCC4C5005391F4 /* RemoteImage+cache.swift in Sources */,
-				041F3EE02BFC99AB00639E25 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +491,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		041290132BFE2FDA0009F139 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0412901B2BFE332D0009F139 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041290132BFE2FDA0009F139 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		047F14862BFE5599008A9172 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041290132BFE2FDA0009F139 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 042D2CE42BFBE61500B44346 /* Project object */;
 }

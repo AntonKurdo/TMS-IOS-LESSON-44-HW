@@ -1,7 +1,7 @@
 import Foundation
 
 class APIService {
-    let requestUrl = "https://raw.githubusercontent.com/AntonKurdo/TMS-IOS-LESSON-44-HW/homework/TMS-IOS-LESSON-44-HW/TMS-IOS-LESSON-44-HW/db/db.json"
+    private let requestUrl = "https://raw.githubusercontent.com/AntonKurdo/TMS-IOS-LESSON-44-HW/homework/TMS-IOS-LESSON-44-HW/TMS-IOS-LESSON-44-HW/db/db.json"
     
     func getPosts(completionHandler: (([PostModel]) -> Void)? = nil, errorHandler: ((String) -> Void)? = nil) {
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
@@ -21,19 +21,13 @@ class APIService {
                     errorHandler?("Response Error")
                     return
                 }
-                do {
-//                    guard let response = try? JSONDecoder().decode(PostsResponse.self, from: data) else {
-//                        errorHandler?("Decode error")
-//                        return
-//                    }
-                    try JSONDecoder().decode(PostsResponse.self, from: data)
-//                    completionHandler?(response.posts)
-                } catch {
-                    print(error)
+                
+                guard let response = try? JSONDecoder().decode(PostsResponse.self, from: data) else {
+                    errorHandler?("Decode error")
+                    return
                 }
-         
+                completionHandler?(response.posts)
             }
-            
             task.resume()
         }
     }

@@ -5,7 +5,7 @@ struct ContentView: View {
     
     @State
     var isTrue = true
-
+    
     @ObservedObject
     var vm: PostsViewModel = PostsViewModel()
     
